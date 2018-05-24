@@ -15,7 +15,11 @@
 
 	<!-- MENAMPILKAN TOMBOL MENU -->
 	<nav>
-		<ul>
+		<!-- Menu saat responsive -->
+		<div class="menu-mobile">
+			<a href="#" onclick="showMenu()">Menu</a>
+		</div>
+		<ul id="menu">
 			<li><a href="#">HOME</a></li>
 			<li><a href="#">PRODUCT</a></li>
 			<li><a href="#">GALLERY</a></li>
@@ -72,4 +76,19 @@
 	<!-- END -MENAMPILKAN KOTAK PROFILE -->
 
 </body>
+
+<script>
+	function showMenu() {
+		var x = document.getElementById("menu");
+		var box = document.getElementById("box-profile");
+		if (x.style.display === "block") {
+			x.style.display = "none";
+			box.style.paddingTop = "0px";
+		} else {
+			x.style.display = "block";
+			box.style.paddingTop = "125px";
+		}
+	}
+</script>
+
 </html>

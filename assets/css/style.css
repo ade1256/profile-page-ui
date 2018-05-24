@@ -62,6 +62,22 @@ nav ul li a{
 	font-family: 'Helvetica',sans-serif;
 	font-size: 14px;
 }
+nav ul li a:hover{
+	color: #55a8fd;
+}
+.menu-mobile{
+	position: relative;
+	float: right;
+	display: none;
+}
+.menu-mobile a{
+	color: #888;
+	font-size: 14px;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 5px 10px 5px 10px;
+	border:1px solid #888;
+}
 /*</NAVBAR*/
 
 /*PROFILE*/
@@ -149,12 +165,34 @@ section#box-profile{
 		margin-right: 5%;
 		margin-top: 30px;
 	}
-	nav ul{display: none;}
+	.menu-mobile{
+		top: 20px;
+		right: 10%;
+		display: inline-block;
+	}
+	nav ul{
+		display: none;
+		right: 0;
+		width: 100%;
+		text-align: center;
+		top: 43px;
+		z-index: 99;
+		background: #fff;
+	}
+	nav ul li{
+		float: unset;
+		margin: 0;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
 	.description{
 		padding-left: 30px;
 		width: 90%;
 		text-align: center;
 		margin-left: 0;
+	}
+	.description .button {
+		padding: 10px 25px 10px 25px;
 	}
 	.img-profile .photo{
 		left: 10px;
@@ -166,11 +204,12 @@ section#box-profile{
 		font-size: 14px;
 	}
 	.information .data {
-    height: 48px;
-}
+		height: 48px;
+	}
 	.information p.field {
 		width: 95px;
 	}
+
 }
 
 
@@ -183,12 +222,32 @@ section#box-profile{
 		margin-right: 5%;
 		margin-top: 30px;
 	}
-	nav ul{display: none;}
+	.menu-mobile{
+		top: 20px;
+		right: 10%;
+		display: inline-block;
+	}
+	nav ul{
+		display: none;
+		right: 0;
+		width: 100%;
+		text-align: center;
+		top: 43px;
+		z-index: 99;
+		background: #fff;
+	}
+	nav ul li{
+		float: unset;
+		margin: 0;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
 	.description{
-		padding-left: 30px;
-		width: 90%;
+		padding-left: 0px;
+		width: 100%;
 		text-align: center;
 		margin-left: 0;
+		border:none;
 	}
 	.img-profile .photo{
 		left: 35px;
@@ -199,5 +258,6 @@ section#box-profile{
 		margin-left: 25px;
 		font-size: 14px;
 	}
+	
 }
 /*</Responsive di Mobile*/
