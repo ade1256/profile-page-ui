@@ -1,3 +1,5 @@
+
+
 /*RESET MARGIN PADDING DARI BAWAAN BROWSER*/
 *,body{
 	margin:0;
@@ -15,6 +17,12 @@ body{
 	color: #fff;
 	box-shadow: 0 0 7px 0px #52dc90;
 	border: 1px solid #52dc90;
+}
+.bg-blue{
+	background-color: #55a8fd;
+	color: #fff;
+	box-shadow: 0 0 7px 0px #55a8fd;
+	border: 1px solid #55a8fd;
 }
 .border-blue{
 	color: #55a8fd;
@@ -156,6 +164,41 @@ section#box-profile{
 
 /*</PROFILE*/
 
+/*SECTION INPUT FORM*/
+section#input-form{
+	position: relative;
+	max-width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 60px;
+	border-radius: 6px;
+	background-color: #fff;
+	box-shadow:0 0 7px 0px rgba(136, 136, 136, 0.2);
+	padding: 30px;
+}
+#input-form .form{
+	width: 100%;
+    display: grid;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+label{
+	font-family: 'Helvetica',sans-serif;
+	font-size: 16px;
+	color: #333;
+	font-weight: 600;
+}
+input{
+	font-family: 'Helvetica',sans-serif;
+	padding: 10px 20px 10px 20px;
+    outline: none;
+    border-radius: 3px;
+    border: 1px solid #8888;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
 /*Responsive di Mobile sangat kecil*/
 @media screen and (max-width: 320px){
 	section#box-profile{
@@ -193,6 +236,8 @@ section#box-profile{
 	}
 	.description .button {
 		padding: 10px 25px 10px 25px;
+		margin-right: 10px;
+		margin-left: 10px;
 	}
 	.img-profile .photo{
 		left: 10px;
@@ -249,6 +294,10 @@ section#box-profile{
 		margin-left: 0;
 		border:none;
 	}
+	.description .button{
+		margin-right: 10px;
+		margin-left: 10px;
+	}
 	.img-profile .photo{
 		left: 35px;
 		position: relative;
@@ -260,4 +309,4 @@ section#box-profile{
 	}
 	
 }
-/*</Responsive di Mobile*/
+/*</Responsive di Mobile
