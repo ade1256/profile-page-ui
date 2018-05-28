@@ -42,7 +42,7 @@
 		<div class="description">
 			<h1>Cecilla Wint</h1>
 			<p>Front End Designer</p>
-			<a href="#" class="button bg-green">Contact</a>
+			<a href="#input-form" class="button bg-green" onclick="editForm()">Edit</a>
 			<a href="#" class="button border-blue">Resume</a>
 		</div>
 		<!-- END - MENAMPILKAN NAMA, PEKERJAAN, DESCRIPTION -->
@@ -108,7 +108,7 @@
 				<input type="email" name="email" />
 			</div>
 			<div class="form">
-				<input type="submit" name="submit" value="SUBMIT" class="bg-blue" />
+				<input type="submit" name="submit" value="SIMPAN" class="bg-blue" />
 			</div>
 		</form>
 	</section>
@@ -116,6 +116,17 @@
 </body>
 
 <script>
+	var formMenu = document.getElementById("input-form");
+	formMenu.style.display = "none";
+
+	function editForm(){
+		if (formMenu.style.display === "none") {
+			formMenu.style.display = "block";
+		} else {
+			formMenu.style.display = "none";
+		}
+	}
+
 	function showMenu() {
 		var x = document.getElementById("menu");
 		var box = document.getElementById("box-profile");
