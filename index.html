@@ -40,8 +40,8 @@
 
 		<!-- MENAMPILKAN NAMA, PEKERJAAN, DESCRIPTION -->
 		<div class="description">
-			<h1>Cecilla Wint</h1>
-			<p>Front End Designer</p>
+			<h1 id="pName">Cecilla Wint</h1>
+			<p id="pRole">Front End Designer</p>
 			<a href="#input-form" class="button bg-green" onclick="editForm()">Edit</a>
 			<a href="#" class="button border-blue">Resume</a>
 		</div>
@@ -51,23 +51,23 @@
 		<div class="information">
 			<div class="data">
 				<p class="field">Availability</p>
-				<p class="text-gray">Full Time</p>
+				<p id="pAvailable" class="text-gray">Full Time</p>
 			</div>
 			<div class="data">
 				<p class="field">Age</p>
-				<p class="text-gray">17</p>
+				<p id="pAge" class="text-gray">17</p>
 			</div>
 			<div class="data">
 				<p class="field">Location</p>
-				<p class="text-gray">Jakarta, Indonesia</p>
+				<p id="pLocation" class="text-gray">Jakarta, Indonesia</p>
 			</div>
 			<div class="data">
 				<p class="field">Years Experience</p>
-				<p class="text-gray">6</p>
+				<p id="pExperience" class="text-gray">6</p>
 			</div>
 			<div class="data">
 				<p class="field">Email</p>
-				<p class="text-gray">cecillawint@gmail.com</p>
+				<p id="pEmail" class="text-gray">cecillawint@gmail.com</p>
 			</div>
 		</div>
 		<!-- END - MENAMPILKAN DATA DATA PROFILE -->
@@ -78,39 +78,39 @@
 
 	<!-- SECTION INPUT FORM -->
 	<section id="input-form">
-		<form method="POST" action="#">
+		<!-- <form method="" action="#"> -->
 			<div class="form">
 				<label>Name</label>
-				<input type="text" name="name" />
+				<input id="inpName" type="text" name="name" />
 			</div>
 			<div class="form">
 				<label>Role</label>
-				<input type="text" name="role" />
+				<input id="inpRole" type="text" name="role" />
 			</div>
 			<div class="form">
 				<label>Availability</label>
-				<input type="text" name="availability" />
+				<input id="inpAvailability" type="text" name="availability" />
 			</div>
 			<div class="form">
 				<label>Age</label>
-				<input type="number" name="age" />
+				<input id="inpAge" type="number" name="age" />
 			</div>
 			<div class="form">
 				<label>Location</label>
-				<input type="text" name="location" />
+				<input id="inpLocation" type="text" name="location" />
 			</div>
 			<div class="form">
 				<label>Years Experience</label>
-				<input type="number" name="years" />
+				<input id="inpYears" type="number" name="years" />
 			</div>
 			<div class="form">
 				<label>Email</label>
-				<input type="email" name="email" />
+				<input id="inpEmail" type="email" name="email" />
 			</div>
 			<div class="form">
-				<input type="submit" name="submit" value="SIMPAN" class="bg-blue" />
+				<input onclick="simpanForm()" id="inp" type="submit" name="submit" value="SIMPAN" class="bg-blue" />
 			</div>
-		</form>
+		<!-- </form> -->
 	</section>
 
 </body>
@@ -125,6 +125,46 @@
 		} else {
 			formMenu.style.display = "none";
 		}
+		
+		var name = document.getElementById("pName").innerHTML;
+		var role = document.getElementById("pRole").innerHTML;
+		var available = document.getElementById("pAvailable").innerHTML;
+		var age = document.getElementById("pAge").innerHTML;
+		var location = document.getElementById("pLocation").innerHTML;
+		var experience = document.getElementById("pExperience").innerHTML;
+		var email = document.getElementById("pEmail").innerHTML;
+
+		document.getElementById('inpName').value = name;
+		document.getElementById('inpRole').value = role;
+		document.getElementById('inpAvailability').value = available;
+		document.getElementById('inpAge').value = age;
+		document.getElementById('inpLocation').value = location;
+		document.getElementById('inpYears').value = experience;
+		document.getElementById('inpEmail').value = email;
+	}
+
+	function simpanForm(){
+		if (formMenu.style.display === "none") {
+			formMenu.style.display = "block";
+		} else {
+			formMenu.style.display = "none";
+		}
+		
+		var name = document.getElementById("inpName").value;
+		var role = document.getElementById("inpRole").value;
+		var available = document.getElementById("inpAvailability").value;
+		var age = document.getElementById("inpAge").value;
+		var location = document.getElementById("inpLocation").value;
+		var experience = document.getElementById("inpYears").value;
+		var email = document.getElementById("inpEmail").value;
+
+		document.getElementById('pName').innerHTML = name;
+		document.getElementById('pRole').innerHTML = role;
+		document.getElementById('pAvailable').innerHTML = available;
+		document.getElementById('pAge').innerHTML = age;
+		document.getElementById('pLocation').innerHTML = location;
+		document.getElementById('pExperience').innerHTML = experience;
+		document.getElementById('pEmail').innerHTML = email;
 	}
 
 	function showMenu() {
